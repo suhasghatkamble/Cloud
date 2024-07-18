@@ -1,0 +1,31 @@
+Git
+
+vim PrimeNumber.java
+javac PrimeNumber.java
+java PrimeNumber
+
+-----
+Create Repo on git 
+Copy Token
+
+```````````
+
+git config --global user.name GIT_USERNAME
+git config --global user.email GIT_EMAIL
+git init
+git add *
+git commit -m "my first commit"
+git show
+git branch -M main
+git remote add origin GIT_REPO_LINK
+git push -u origin main
+(copy paste token)
+vim PrimeNumber.java  
+ (do changes in file)
+ 
+git add *
+git commit -m "my second commit"
+git push
+(check in github)
+
+

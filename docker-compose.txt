@@ -1,0 +1,15 @@
+docker-compose.yml
+
+service:
+Service1
+{
+build:./python
+other pre-setting 
+how the service will run
+expose port and network
+}
+service2:
+{
+
+
+}

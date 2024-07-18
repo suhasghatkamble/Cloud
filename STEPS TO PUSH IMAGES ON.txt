@@ -1,0 +1,68 @@
+STEPS TO PUSH IMAGES ON DOCKERHUB
+
+CREATE FOLDER--CREATE DOCKERFILE, CREATE JAVA FILE, COMPILE JAVA FILE, 
+
+
+
+``````````````````````````````````````````````````````````
+******** Dockerfile***********
+# Use the official OpenJDk image as a parent image
+FROM openjdk:latest
+
+# set the working directory to /app
+WORKDIR /app
+
+# Copy the currrent directory contents into the container at   /app
+COPY . /app
+
+# Compile the Java code
+RUN javac PrimeNumber.java
+
+
+# Run the program when the container starts
+CMD ["java","PrimeNumber"]
+
+```````````````````````````````````````````````````````````
+
+
+JAVAFILE
+
+import java.util.Scanner;
+
+public class PrimeNumber {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("prime no check .. please enter no.");
+        int num = sc.nextInt();
+        boolean isPrime = true;
+        for(int i =2; i<num/2;i++){
+            if(num % i == 0){
+                isPrime =false;
+                break;
+
+            }
+        } 
+
+
+        if(isPrime)
+        System.out.println(num+"is a prime no");
+        else
+        System.out.println(num+"is not a prime no");
+        sc.close();
+    }
+}
+
+```````````````````````````````````````````````````````````````
+
+
+```````````````````````````````````````
+--Build image and tag 
+sudo docker build -t dock_user_name/image_name:v1 .
+sudo docker login
+sudo docker push docker_user_name/image_name:v1
+
+
+
+
+

@@ -1,0 +1,17 @@
+Jenkins --- 
+build, test, and deploy
+
+Github - Dockerfile - Build the docker file - Push it to Dockerhub
+
+CI/CD 
+
+Pipelines ---- Automating a piece of you Buid / Test / Deployment
+
+pipeline -----			Global Variables -- Github --- Dockerhub
+{
+ENV variables 
+stage1{}   ------ Extensions function or you write down shell script
+stage2{}
+stage3{}
+}
+

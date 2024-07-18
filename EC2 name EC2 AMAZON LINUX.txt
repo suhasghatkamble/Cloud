@@ -1,0 +1,41 @@
+EC2
+name : EC2
+AMAZON LINUX AWS
+key pair : myhpckeypair
+
+IN NETWORK SETTING 
+CLICK ON ALLOW HTTP TRAFFIC FROM THE INTERNET
+
+ADVANCE SETTING :
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+
+CLICK ON LAUNCH INSTANCE
+
+CLICK ON NUMBER
+CLICK ON IPV4 ADDRESS
+REMOVE S FROM HTTPS: LINK
+
+
+````````````````````````````````````````````````````````````````````````
+
+
+UBUNTU 
+
+
+ADVANCE SETTING : 
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+sudo apt update -y
+sudo apt install httpd -y
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html

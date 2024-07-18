@@ -1,0 +1,27 @@
+------------ Steps to install microk8s kubenetes on Ubuntu ------
+apt install docker.io -y
+systemctl enable docker
+
+systemctl status docker
+
+systemctl start docker
+
+snap install microk8s --classic --channel=1.26
+-------------------------------------------------------------
+
+Docker Dektop--> Setting --> kubernetes 
+checkbox enable
+//command to excute on command prompt//
+
+kubectl create deployment --image nginx my-nginx
+kubectl get pods
+kubectl get deployment
+kubectl scale deployment --replicas 2 my-nginx
+kubectl get pods
+kubectl expose deployment my-nginx --port=80 --type=LoadBalancer
+kubectl get services
+kubectl get services -o wide
+kubectl get configmap
+
+kubectl delete deployment my-nginx
+kubectl delete services my-nginx

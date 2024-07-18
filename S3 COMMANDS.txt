@@ -1,0 +1,47 @@
+SEARCH S3
+CREATE BUCKET
+give name
+
+enable 
+click uncheck block 
+
+click on number
+
+upload index file
+
+click on permissions 
+edit
+add script 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "S3:GetObject",
+            "Resource": "ADD_HERE_LINK_COPY/*"
+        }
+    ]
+}
+
+
+make changes of url in it
+
+
+
+```````````````````````````````````````````
+
+search lambda
+give name
+give python 3.12
+
+create function
+
+add trigger
+search s3
+give s3 bucket name
+
+
+

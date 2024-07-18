@@ -1,0 +1,112 @@
+1.to check images
+docker image list
+
+2.to stop running container 
+docker container stop container_id
+
+3.to build image
+
+create java program
+compile the java program -- javac HelloWorld.java
+create Dockerfile 
+
+Dockerfile--
+FROM openjdk:latest
+WORKDIR /app
+COPY . /app
+RUN javac HelloWorld.java
+CMD ["java", "HelloWorld"]
+
+
+in terminal in java file folder
+
+docker build -t any_name .   (any_name must be in lowercase)
+docker run any_name
+docker image list
+
+--Docker container run
+docker run any_name
+
+--Docker container list
+docker container list -a
+docker ps -a
+
+--Docker stop running container
+docker stop container_name or container_id
+
+--Remove container
+docker rm container_name or container_id
+
+--image list
+docker images or docker image list
+
+--Remove image
+docker rmi image_image
+
+docker pull image_name
+docker push image_name
+
+
+
+
+
+
+
+
+STEPS TO PUSH IMAGES ON DOCKERHUB
+
+CREATE FOLDER--CREATE DOCKERFILE, CREATE JAVA FILE, COMPILE JAVA FILE, 
+
+
+
+
+```````````````````````````````````````
+--Build image and tag 
+sudo docker build -t dock_user_name/image_name:v1 .
+sudo docker login
+sudo docker push docker_user_name/image_name:v1
+
+
+
+
+
+
+
+
+
+
+
+docker login
+
+docker tag docker_acc_name/image_name:v1 .
+docker push docker_acc_name/image_name:latest
+docker image list
+
+
+
+STEPS TO DOCKER COMPOSE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AMAZON EC2 SCRIPT
+
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname-f)</h1>">/var/www/html/index.html

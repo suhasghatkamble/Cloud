@@ -1,0 +1,12 @@
+java-pimenumber   
+
+2ca8bb40c386 
+
+
+docker tag java-pimenumber suhasg27/java_prime_number:0.1
+
+docker push username_of_docker/java_prime_number:0.1
+
+
+pull==
+docker pull crusty97/java-prime:0.1

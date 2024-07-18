@@ -1,0 +1,13 @@
+Docker ---> 
+
+Dockerfile
+
+FROM ubuntu/apache2
+<multiple commands to install or have required libs>
+<Pack you executable code>
+<If serever then expose the ports>
+<Run the code or start the server>
+
+docker build -t "xyz" pathtoDockerfile
+
+docker run -d -p hostport:containerport image
